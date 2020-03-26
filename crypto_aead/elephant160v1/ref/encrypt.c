@@ -111,7 +111,7 @@ void crypto_aead_impl(
     BYTE mask_buffer_1[BLOCK_SIZE] = {0};
     BYTE mask_buffer_2[BLOCK_SIZE] = {0};
     BYTE mask_buffer_3[BLOCK_SIZE] = {0};
-    memcpy(mask_buffer_2, expanded_key, CRYPTO_KEYBYTES);
+    memcpy(mask_buffer_2, expanded_key, BLOCK_SIZE);
 
     BYTE* previous_mask = mask_buffer_1;
     BYTE* current_mask = mask_buffer_2;
